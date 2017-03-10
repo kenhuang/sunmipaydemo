@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/secret_key_index" />
+
+            <EditText
+                android:id="@+id/et_input_key_index"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:hint="@string/secret_key_index"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/secret_key_type" />
+
+            <EditText
+                android:id="@+id/et_input_key_type"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:hint="@string/secret_key_type"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/decryption_key_index" />
+
+            <EditText
+                android:id="@+id/et_input_deciphering_key_index"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:hint="@string/decryption_key_index"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/input_encryption_type" />
+
+            <EditText
+                android:id="@+id/et_input_encryptType"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:hint="@string/input_encryption_type"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/input_mkey_data" />
+
+            <EditText
+                android:id="@+id/et_input_mkey"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:background="@android:color/white"
+                android:hint="@string/input_mkey_data"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/input_key_len" />
+
+            <EditText
+                android:id="@+id/et_input_length"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:hint="@string/input_key_len"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tv_key6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/key_length"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/key_len" />
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_key"
+            android:onClick="startSaveKey"/>
+        <TextView
+            android:id="@+id/tv_save_key_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/result_show" />
+    </LinearLayout>
+</ScrollView>

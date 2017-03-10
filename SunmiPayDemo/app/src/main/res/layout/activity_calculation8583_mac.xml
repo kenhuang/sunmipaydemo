@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:text="@string/connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="conn" />
+
+    <TextView
+        android:text="@string/fixed_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="0x08,0x30,0x00,0x18,0x00,0x00,0x02,0xC0,0x00,0x14,0x11,0x27,0x05,0x01,0x11,0x30,0x30,0x32,0x39,0x30,0x30,0x30,0x32,0x38,0x35,0x38,0x34,0x38,0x32,0x39,0x30,0x30,0x35,0x31,0x39,0x38,0x36,0x30,0x30,0x32,0x00,0x11,0x00,0x00,0x00,0x01,0x38,0x20,0x00,0x45,0x31,0x9F,0x06,0x08,0xA0,0x00,0x00,0x03,0x33,0x01,0x01,0x01,0x9F,0x06,0x08,0xA0,0x00,0x00,0x03,0x33,0x01,0x01,0x02,0x9F,0x06,0x08,0xA0,0x00,0x00,0x03,0x33,0x01,0x01,0x03,0x9F,0x06,0x08,0xA0,0x00,0x00,0x03,0x33,0x01,0x01,0x06"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1" />
+
+    <EditText
+        android:id="@+id/edit_type"
+        android:layout_width="match_parent"
+        android:hint="@string/encryption_type"
+        android:inputType="number"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_index"
+        android:layout_width="match_parent"
+        android:hint="@string/key_index"
+        android:inputType="number"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="@string/calculation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calculation"
+        android:id="@+id/button2" />
+
+    <TextView
+        android:text="@string/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+</LinearLayout>

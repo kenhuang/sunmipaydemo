@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_check_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f667"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARD_TYPE_MAG" />
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARDTYPE_IC" />
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARDTYPE_NFC" />
+
+    <EditText
+        android:id="@+id/edit_timeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/wait_time" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="initProvider"
+        android:text="@string/initialization" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startCheckCard"
+        android:text="@string/start_check_card" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopCheckCard"
+        android:text="@string/stop_check_card" />
+
+    <TextView
+        android:id="@+id/checkstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

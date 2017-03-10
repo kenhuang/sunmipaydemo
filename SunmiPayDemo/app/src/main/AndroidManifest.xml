@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blanks.test.demo">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SaveKeyActivity" />
+        <activity android:name=".StandardEncryptionPinActivity" />
+        <activity android:name=".InputPasswordActivity" />
+        <activity android:name=".SetMasterKeyActivity" />
+        <activity android:name=".UpdateMACKeyActivity" />
+        <activity android:name=".DataEncryptActivity" />
+        <activity android:name=".UpdatePINKeyActivity" />
+        <activity android:name=".CheckCardRemovedActivity" />
+        <activity android:name=".Calculation8583MacActivity" />
+        <activity android:name=".TransactionActivity" />
+        <activity android:name=".NFCTestActivity"></activity>
+        <activity android:name=".AuthorizationProcessActivity"></activity>
+        <activity android:name=".CheckCardActivity"></activity>
+        <activity android:name=".CRUDAidRidActivity" />
+
+        <!-- 消费相关-->
+        <activity android:name=".swingcard.ConsumeInputPWDActivity" />
+        <activity android:name=".swingcard.ConsumeSwingCardActivity" />
+    </application>
+
+</manifest>

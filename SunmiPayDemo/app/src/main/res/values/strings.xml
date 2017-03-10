@@ -1,0 +1,165 @@
+﻿<resources>
+    <string name="app_name">SunmiPayTestDemo</string>
+    <string name="tip">Service uninitialized, please connect the hardware service!</string>
+    <string name="connected">Connection status: connected</string>
+    <string name="unconnected">Connection status: disconnected</string>
+    <string name="wait_swipe_card">Waiting for the user to swipe card...</string>
+    <string name="swipe_timeout">Swipe card timeout!</string>
+    <string name="read_card_fail">Failed to read the card!</string>
+    <string name="read_card_success">Read the card successfully, the information not yet displayed!</string>
+
+    <string name="server_connection_failed">Server connection failed</string>
+    <string name="input_cannot_be_null">Input cannot be null</string>
+    <string name="authorization_processing">Processing authorization</string>
+    <string name="tag_length">TagIn length:</string>
+    <string name="return_result">Returns the result</string>
+    <string name="return_MAC_ciphertext">MAC ciphertext returned :</string>
+    <string name="exception">Exception:</string>
+    <string name="connect">connect</string>
+    <string name="fixed_data">Fixed data:</string>
+    <string name="encryption_type">Encryption type</string>
+    <string name="calculation">Calculation</string>
+    <string name="result">result</string>
+    <string name="card_timeout">Card timeout！</string>
+    <string name="card_type">Card type:</string>
+    <string name="pan">PAN:</string>
+    <string name="track2">track2:</string>
+    <string name="additonal">additonal:</string>
+    <string name="initial_success">Initial success</string>
+    <string name="initial_fail">Automatic initialization failed, please try again!</string>
+    <string name="initialization">Initialization</string>
+    <string name="start_check_card">Start checking card</string>
+    <string name="stop_check_card">Stop checking card</string>
+    <string name="check_card_error">Check card Error</string>
+
+    <string name="encrypted_data_results">Data encryption results:</string>
+    <string name="update_completed">The update is complete and the device is calibrating ...</string>
+    <string name="update_process">The update progress:</string>
+    <string name="update_error">Update error:</string>
+    <string name="restart_devices">Check finish, restart the device to update!</string>
+    <string name="functions_error">Function execution failed, error code:</string>
+    <string name="APDU_error">APDU instruction execution failed!Error code:</string>
+    <string name="APDU_success">APDU instruction execution is successful, returns the data:</string>
+    <string name="AID_fail">Failed to set the AID!Return the data:</string>
+    <string name="AID_success">Set the AID success!Return the data:</string>
+    <string name="RID_fail">Set the RID failed!Return the data:</string>
+    <string name="RID_success">Set the RID success!Return the data:</string>
+    <string name="AID_delete_success">Delete all AID success!Return the data:</string>
+    <string name="AID_delete_fail">Delete all AID failed!Return the data:</string>
+    <string name="RID_delete_fail">Delete all rids failed!Return the data:</string>
+    <string name="RID_delete_success">Delete all rids success!Return the data:</string>
+    <string name="cal_8583_error">An exception has occurred when calculating 8583:</string>
+    <string name="firmware_version">Device firmware version:</string>
+    <string name="hardware_version">Device hardware version:</string>
+    <string name="check_version">Check the SDK version:</string>
+    <string name="version_code">Version Number</string>
+    <string name="confirm">Confirm</string>
+    <string name="input_tip">Input can\'t be empty!</string>
+    <string name="init">Init</string>
+    <string name="version_info">Version Info</string>
+    <string name="buzzer">Buzzer</string>
+    <string name="led">LED</string>
+    <string name="check_card">Check card</string>
+    <string name="ic_apdu">IC APDU</string>
+    <string name="nfc_apdu">NFC APDU</string>
+    <string name="is_remove_card">Card is removed</string>
+    <string name="set_master_key">Set device master key</string>
+    <string name="update_pin_key">Update PIN Key</string>
+    <string name="update_pan_key">Update PAN Key</string>
+    <string name="update_mac_key">Update MAC Key</string>
+    <string name="save_key">Save key</string>
+    <string name="enciphered_data">Encrypt the data</string>
+    <string name="cal_8583_mac">Calculate the MAC of 8583 data packet</string>
+    <string name="click_input_password">Click to enter the password</string>
+    <string name="ic_capk_aid">Set the parameters of IC card (capk, aid)</string>
+    <string name="pre_transaction">Transaction preprocessing</string>
+    <string name="authorization">Second authorization processing</string>
+    <string name="update_firmware">Update the firmware</string>
+    <string name="swing_card">swing card</string>
+    <string name="result_show">The results shows here:</string>
+    <string name="wait_time">Time to wait</string>
+
+    <string name="isconnected">connected</string>
+    <string name="no_connected">disconnected</string>
+    <string name="nfc_removed">NFC card is removed</string>
+    <string name="nfc_unremoved">NFC card is not removed</string>
+    <string name="ic_removed">IC card is removed</string>
+    <string name="ic_unremoved">IC card is not removed</string>
+    <string name="error">error：</string>
+    <string name="check_ic">checking if IC card is removed</string>
+    <string name="check_nfc">checking if NFC card is removed</string>
+
+    <string name="set_rid">set RID</string>
+    <string name="set_aid">set AID</string>
+    <string name="set_aid_success">set AID success！</string>
+    <string name="set_aid_failed">set AID failed！</string>
+    <string name="set_rid_success">set RID success！</string>
+    <string name="set_rid_failed">set RID failed！</string>
+    <string name="no_data">no record found！return data：null</string>
+    <string name="check_all_aid_success">check all RID success！return data：</string>
+    <string name="server_no_init">Service uninitialized，please connect the hardware service first！</string>
+    <string name="check_rid_list">show RID list</string>
+    <string name="check_aid_list">show AID list</string>
+    <string name="delete_rid">delete all RID</string>
+    <string name="delete_aid">delete all AID</string>
+
+    <string name="return_data">return data:</string>
+    <string name="encryption_result">encryption result:</string>
+    <string name="secret_key_index">Please enter key index</string>
+    <string name="secret_key_type">Please enter key type</string>
+    <string name="secret_key_type_index">Please enter key type index</string>
+    <string name="no_encryption_data">Please enter the plaintext data to be encrypted</string>
+    <string name="no_encryption_data2">unencryption data</string>
+    <string name="no_encryption_data_len">The length of unencryption data:</string>
+    <string name="input">input:</string>
+    <string name="output">output:</string>
+    <string name="key_index">key index：</string>
+    <string name="key_type_index">key type index:</string>
+    <string name="encryption">encryption</string>
+    <string name="show_result">show result：</string>
+
+    <string name="custom_cancel">user cancelled</string>
+    <string name="custom_enter_ok">User press ok directly</string>
+    <string name="input_overtime">input timeout</string>
+    <string name="input_pin_error">PIN error:</string>
+
+    <string name="input_encryption_type">Please input encryption type</string>
+    <string name="decryption_key_index">Please input encryption key index</string>
+    <string name="input_mkey_data">Please input MKEY data</string>
+    <string name="input_key_len">Please input key length</string>
+    <string name="key_len">key length</string>
+
+    <string name="master_key">master key in plaintext</string>
+
+    <string name="encrypted">encrypted</string>
+    <string name="encrypting_pin">PIN to be encrypted</string>
+
+    <string name="connect_server_failed">Service connecting failed</string>
+    <string name="return_code">return code:</string>
+    <string name="back">return:</string>
+    <string name="ready_transaction">prepare to transaction</string>
+    <string name="transaction_processing">transaction processing</string>
+
+    <string name="mac_key_data">MAC KEY data</string>
+    <string name="pin_key_data">PIN KEY data</string>
+    <string name="error_input">Your input is incorrect. Please try again</string>
+    <string name="int_check_error">Enter a number in 1-3</string>
+    <string name="base_pwd_connecting">Connecting to UnionPay…</string>
+    <string name="base_init_error">Initial transaction failed</string>
+    <string name="base_loadding">Loading…</string>
+    <string name="consume_result_deal">Transaction Failed</string>
+
+    <!-- 消费相关-->
+    <string name="amount">￥%s</string>
+    <string name="consume_im_title">Purchase</string>
+    <string name="consume_im_money">Amount</string>
+    <string name="consume_im_card_num">CARD NUMBER</string>
+    <string name="consume_result_read_card">Failed to read card</string>
+    <string name="consume_result_retry">Click to try again</string>
+    <string name="consume_result_success">Transaction Success</string>
+    <string name="consume_result_excess">Exceed Card Limit</string>
+
+    <string name="amount_of_money">amount</string>
+    <string name="input_password_hint">Enter your password, or click OK if no password</string>
+    <string name="card_number">CARD Number</string>
+</resources>

@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">SunmiPayTestDemo</string>
+    <string name="tip">服务未连接，请先连接服务</string>
+    <string name="connected">连接状态：已连接</string>
+    <string name="unconnected">连接状态：未连接</string>
+    <string name="wait_swipe_card">等待用户刷卡......</string>
+    <string name="swipe_timeout">刷卡超时！</string>
+    <string name="read_card_fail">读卡失败！</string>
+    <string name="read_card_success">读卡成功，信息暂未显示！</string>
+
+
+    <string name="server_connection_failed">服务器连接失败</string>
+    <string name="input_cannot_be_null">输入不能为空</string>
+    <string name="authorization_processing">授权处理</string>
+    <string name="tag_length">tagIn长度：</string>
+    <string name="return_result">返回结果</string>
+    <string name="return_MAC_ciphertext">返回MAC密文:</string>
+    <string name="exception">异常:</string>
+    <string name="connect">连接</string>
+    <string name="fixed_data">固定数据:</string>
+    <string name="encryption_type">加密类型</string>
+    <string name="calculation">计算</string>
+    <string name="result">结果</string>
+    <string name="card_timeout">刷卡超时！</string>
+    <string name="card_type">卡片类型：</string>
+    <string name="pan">PAN:</string>
+    <string name="track2">track2:</string>
+    <string name="additonal">additonal:</string>
+    <string name="initial_success">初始化成功</string>
+    <string name="initial_fail">自动初始化失败，请手动重试！</string>
+    <string name="initialization">初始化</string>
+    <string name="start_check_card">开始检卡</string>
+    <string name="stop_check_card">终止检卡</string>
+    <string name="check_card_error">检卡失败</string>
+
+    <string name="encrypted_data_results">数据加密结果：</string>
+    <string name="update_completed">更新完成，设备校验中......</string>
+    <string name="update_process">更新进度：</string>
+    <string name="update_error">更新错误：</string>
+    <string name="restart_devices">校验成功，设备重启更新！</string>
+    <string name="functions_error">函数执行失败，错误码：</string>
+    <string name="APDU_error">APDU指令执行失败！错误代码：</string>
+    <string name="APDU_success">APDU指令执行成功，返回数据：</string>
+    <string name="AID_fail">设置AID失败！返回数据：</string>
+    <string name="AID_success">设置AID成功！返回数据：</string>
+    <string name="RID_fail">设置RID失败！返回数据：</string>
+    <string name="RID_success">设置RID成功！返回数据：</string>
+    <string name="AID_delete_fail">删除全部AID失败！返回数据：</string>
+    <string name="AID_delete_success">删除全部AID成功！返回数据：</string>
+    <string name="RID_delete_fail">删除全部RID失败！返回数据：</string>
+    <string name="RID_delete_success">删除全部RID成功！返回数据：</string>
+    <string name="cal_8583_error">计算8583出现异常：</string>
+    <string name="firmware_version">设备固件版本:</string>
+    <string name="hardware_version">设备硬件版本:</string>
+    <string name="check_version">查询SDK版本:</string>
+    <string name="version_code">版本号</string>
+    <string name="confirm">确定</string>
+    <string name="input_tip">输入不能为空</string>
+    <string name="init">初始化</string>
+    <string name="version_info">版本信息</string>
+    <string name="buzzer">蜂鸣器</string>
+    <string name="led">led灯</string>
+    <string name="check_card">检卡</string>
+    <string name="ic_apdu">IC APDU</string>
+    <string name="nfc_apdu">NFC APDU</string>
+    <string name="is_remove_card">卡是否移走</string>
+    <string name="set_master_key">设置终端主密钥</string>
+    <string name="update_pin_key">更新PIN Key</string>
+    <string name="update_pan_key">更新PAN Key</string>
+    <string name="update_mac_key">更新MAC Key</string>
+    <string name="save_key">保存 密钥</string>
+    <string name="enciphered_data">加密数据</string>
+    <string name="cal_8583_mac">计算8583包的MAC</string>
+    <string name="click_input_password">点击输入密码</string>
+    <string name="ic_capk_aid">设置IC卡参数（capk ,aid）</string>
+    <string name="pre_transaction">交易预处理</string>
+    <string name="authorization">二次授权处理</string>
+    <string name="update_firmware">更新固件</string>
+    <string name="swing_card">刷卡</string>
+    <string name="result_show">结果展示区域：</string>
+    <string name="wait_time">等待时长</string>
+
+    <string name="isconnected">已连接</string>
+    <string name="no_connected">未连接</string>
+    <string name="nfc_removed">NFC卡已移除</string>
+    <string name="nfc_unremoved">NFC卡未移除</string>
+    <string name="ic_removed">IC卡已移除</string>
+    <string name="ic_unremoved">IC卡未移除</string>
+    <string name="error">异常：</string>
+    <string name="check_ic">检查IC卡是否移走</string>
+    <string name="check_nfc">检查NFC卡是否移走</string>
+
+    <string name="set_rid">设置RID</string>
+    <string name="set_aid">设置AID</string>
+    <string name="set_aid_success">设置AID成功！</string>
+    <string name="set_aid_failed">设置AID失败！</string>
+    <string name="set_rid_success">设置RID成功！</string>
+    <string name="set_rid_failed">设置RID失败！</string>
+    <string name="no_data">没有记录！返回数据：null</string>
+    <string name="check_all_aid_success">查看全部RID成功！返回数据：</string>
+    <string name="server_no_init">服务未初始化，请先连接硬件服务！</string>
+    <string name="check_rid_list">查看RID列表</string>
+    <string name="check_aid_list">查看AID列表</string>
+    <string name="delete_rid">删除所有RID</string>
+    <string name="delete_aid">删除所有AID</string>
+
+    <string name="return_data">返回值：</string>
+    <string name="encryption_result">加密结果：</string>
+    <string name="secret_key_index">请输入密钥索引</string>
+    <string name="secret_key_type">请输入密钥类型</string>
+    <string name="secret_key_type_index">请输入密钥类型索引</string>
+    <string name="no_encryption_data">请输入待加密的明文数据</string>
+    <string name="no_encryption_data2">待加密的明文数据</string>
+    <string name="no_encryption_data_len">待加密的明文数据长度:</string>
+    <string name="input">输入:</string>
+    <string name="output">输出:</string>
+    <string name="key_index">密钥索引：</string>
+    <string name="key_type_index">密钥类型索引:</string>
+    <string name="encryption">数据加密</string>
+    <string name="show_result">显示结果：</string>
+
+    <string name="custom_cancel">用户取消</string>
+    <string name="custom_enter_ok">用户直接按下确定</string>
+    <string name="input_overtime">输入超时</string>
+    <string name="input_pin_error">PIN输入错误：</string>
+
+    <string name="input_encryption_type">请输入加密类型</string>
+    <string name="decryption_key_index">请输入解密密钥索引</string>
+    <string name="input_mkey_data">请输入MKEY数据</string>
+    <string name="input_key_len">请输入密钥长度</string>
+    <string name="key_len">密钥长度</string>
+
+    <string name="master_key">明文主密钥</string>
+
+    <string name="encrypted">加密</string>
+    <string name="encrypting_pin">待加密明文PIN</string>
+
+    <string name="connect_server_failed">连接服务失败</string>
+    <string name="return_code">返回码:</string>
+    <string name="back">返回:</string>
+    <string name="ready_transaction">准备交易</string>
+    <string name="transaction_processing">交易处理</string>
+
+    <string name="mac_key_data">MAC KEY数据</string>
+    <string name="pin_key_data">PIN KEY数据</string>
+    <string name="error_input">您的输入有误，请重新输入</string>
+    <string name="int_check_error">请输入1-3的数字</string>
+    <string name="base_pwd_connecting">正在连接银联中心...</string>
+    <string name="base_init_error">初始交易失败</string>
+    <string name="base_loadding">加载中...</string>
+    <string name="consume_result_deal">交易失败</string>
+
+    <string name="amount">￥%s</string>
+    <string name="consume_im_title">消费</string>
+    <string name="consume_im_money">金额</string>
+    <string name="consume_im_card_num">卡号</string>
+    <string name="consume_result_read_card">读卡失败</string>
+    <string name="consume_result_retry">点击重试</string>
+    <string name="consume_result_success">交易成功</string>
+    <string name="consume_result_excess">您使用的卡片超限额</string>
+
+    <string name="amount_of_money">金额</string>
+    <string name="input_password_hint">请输入密码，无码点击确定</string>
+    <string name="card_number">卡号</string>
+</resources>
