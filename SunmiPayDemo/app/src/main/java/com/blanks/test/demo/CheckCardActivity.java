@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blanks.test.demo.bean.CardInfo;
+import com.blanks.test.demo.swingcard.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,6 @@ import java.util.List;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_IC;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_MAG;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_NFC;
-import static com.blanks.test.demo.MainActivity.SECURE_READER_DEVICE;
 
 public class CheckCardActivity extends Activity {
 
@@ -121,7 +121,7 @@ public class CheckCardActivity extends Activity {
 
         byte[] b = new byte[4];
         try {
-            MyApplication.deviceProvide.getReadCardProvider().checkCard(cardType, SECURE_READER_DEVICE, b, b.length, Integer.valueOf(editText.getText().toString().trim()));
+            MyApplication.deviceProvide.getReadCardProvider().checkCard(cardType, Constant.SECURE_READER_DEVICE, b, b.length, Integer.valueOf(editText.getText().toString().trim()));
             textView5.setText("等待检卡......");
         } catch (Exception e) {
 

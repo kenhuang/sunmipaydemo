@@ -41,7 +41,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public static final int CARDTYPE_MAG = 1;
     public static final int CARDTYPE_IC = 2;
     public static final int CARDTYPE_NFC = 4;
-    public static final int SECURE_READER_DEVICE = 269484037;
     private static final int MESSAGE_TOAST = 15;
     private Button mButton;
 

@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.blanks.test.demo.MainActivity.SECURE_READER_DEVICE;
 import static com.blanks.test.demo.MyApplication.deviceProvide;
 
 /**
@@ -700,6 +699,14 @@ public abstract class BaseInputPasswordActivity extends ParentActivity {
 
         @Override
         public int onKernelMessage(int type, int messageID, byte[] messageData) throws RemoteException {
+            if (Constant.EMVL2MSGID_TRACK2INFO == messageID) {
+                final String PAN = new String(messageData);
+                payDetail.setCardNo(PAN);
+                Log.e(TAG, "卡号：" + PAN);
+                showToastOnUI("onKernelMessage 卡号：" + PAN);
+            }else if (Constant.EMVL2MSGID_REMOVECARD == messageID) {
+                showToastOnUI("onKernelMessage 卡片信息已读取完成,请移开卡片。");
+            }
             return 0;
         }
 

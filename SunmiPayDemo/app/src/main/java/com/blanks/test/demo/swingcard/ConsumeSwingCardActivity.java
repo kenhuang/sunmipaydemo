@@ -18,7 +18,6 @@ import com.blanks.test.demo.bean.CardInfo;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_IC;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_MAG;
 import static com.blanks.test.demo.MainActivity.CARDTYPE_NFC;
-import static com.blanks.test.demo.MainActivity.SECURE_READER_DEVICE;
 
 
 /**
@@ -89,7 +88,7 @@ public class ConsumeSwingCardActivity extends ParentActivity {
         try {
             String amount = "1000";
             // 175为非接脱机超限，对磁条卡和IC卡不处理
-            int iPOSPrecessStatus = MyApplication.deviceProvide.getEMVProvider().prepareTransaction(SECURE_READER_DEVICE, 1, amount, "0");
+            int iPOSPrecessStatus = MyApplication.deviceProvide.getEMVProvider().prepareTransaction(Constant.SECURE_READER_DEVICE, 1, amount, "0");
             Log.d(TAG, "amount:" + amount + " iPOSPrecessStatus:" + iPOSPrecessStatus);
             if (iPOSPrecessStatus != 175 && iPOSPrecessStatus != 0) {
                 showToast(getResources().getString(R.string.base_init_error));
@@ -144,7 +143,7 @@ public class ConsumeSwingCardActivity extends ParentActivity {
         cardType += CARDTYPE_NFC;
         byte[] appendData = new byte[16];
         try {
-            MyApplication.deviceProvide.getReadCardProvider().checkCard(cardType, SECURE_READER_DEVICE, appendData, appendData.length, 60 * 1000);
+            MyApplication.deviceProvide.getReadCardProvider().checkCard(cardType, Constant.SECURE_READER_DEVICE, appendData, appendData.length, 60);
         } catch (Exception e) {
             e.printStackTrace();
         }
