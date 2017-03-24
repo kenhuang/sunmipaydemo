@@ -16,16 +16,16 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storeFile file('../app/V1.keystore')
-            storePassword 'android'
+            keyAlias 'sunmidemo'
+            keyPassword '123456'
+            storeFile file('../app/sunmidemo.jks')
+            storePassword '123456'
         }
         debug {
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storeFile file('../app/V1.keystore')
-            storePassword 'android'
+            keyAlias 'sunmidemo'
+            keyPassword '123456'
+            storeFile file('../app/sunmidemo.jks')
+            storePassword '123456'
         }
     }
 
