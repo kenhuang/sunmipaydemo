@@ -21,7 +21,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blanks.test.demo.swingcard.ConsumeInputPWDActivity;
 import com.blanks.test.demo.swingcard.ConsumeSwingCardActivity;
 import com.blanks.test.demo.utils.StringByteUtils;
 import com.sunmi.pay.hardware.aidl.BasicProvider;

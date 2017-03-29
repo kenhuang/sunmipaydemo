@@ -5,9 +5,6 @@ package com.blanks.test.demo.swingcard;
  */
 
 public class FieldConfig {
-    //商联的报文请求头格式
-    public static final String MSG_HEADER_START = "60310";//应用类别定义 N2 软件总版本号 N2 终端状态N1
-    public static final String MSG_HEADER_VESION = "011001";//软件分版本号 N6
 
     public static final int SDK_8583_LEN_BCD = 0;
 

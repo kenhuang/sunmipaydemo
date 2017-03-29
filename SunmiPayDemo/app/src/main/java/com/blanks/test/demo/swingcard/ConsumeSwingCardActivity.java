@@ -25,7 +25,7 @@ import static com.blanks.test.demo.MainActivity.CARDTYPE_NFC;
  *
  * @author Leeshenzhou on 2017/2/6.
  */
-public class ConsumeSwingCardActivity extends ParentActivity {
+public class ConsumeSwingCardActivity extends Activity {
 
     private static final String TAG = "ConsumeSwingCard";
     private TextView textView1, textView2, textView3, textView4, textView5;
@@ -41,7 +41,7 @@ public class ConsumeSwingCardActivity extends ParentActivity {
             }
             if (1 == msg.what) {
                 textView5.setText(R.string.check_card_error);
-                Toast.makeText(getApplicationContext(), getString(R.string.check_card_error), Toast.LENGTH_SHORT).show();
+                showToast(getString(R.string.check_card_error));
                 finish();
                 return true;
             }
@@ -113,16 +113,16 @@ public class ConsumeSwingCardActivity extends ParentActivity {
                 MyApplication.deviceProvide.registerTransactionCallback(mCallback);
                 textView5.setText(R.string.initial_success);
                 textView5.setText("等待检卡......");
-                if(prepareTransaction()){
+                if (prepareTransaction()) {
                     startCheckCard();
-                }else {
+                } else {
                     finish();
                 }
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(this, R.string.initial_fail, Toast.LENGTH_LONG).show();
+            showToast(getString(R.string.initial_fail));
         }
 
 
@@ -165,5 +165,8 @@ public class ConsumeSwingCardActivity extends ParentActivity {
         textView4.setText("additonal:  ");
     }
 
+    public void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 }
 

@@ -11,34 +11,7 @@ import java.util.Map;
  * Created by Administrator on 2016/9/5.
  */
 public class TLVUtils {
-    /**
-     * 将16进制字符串转换为TLV对象列表
-     *
-     * @param hexString
-     * @return
-     */
-    public static List<TLV> builderTLVList(String hexString) {
-        List<TLV> tlvs = new ArrayList<TLV>();
 
-        int position = 0;
-        while (position != hexString.length()) {
-            String _hexTag = getTag(hexString, position);
-            position += _hexTag.length();
-
-            LPositon l_position = getLengthAndPosition(hexString, position);
-            int _vl = l_position.get_vL();
-
-            position = l_position.get_position();
-
-            String _value = hexString.substring(position, position + _vl * 2);
-
-            position = position + _value.length();
-
-            tlvs.add(new TLV(_hexTag, _vl, _value));
-        }
-
-        return tlvs;
-    }
 
     /**
      * 将16进制字符串转换为TLV对象MAP
