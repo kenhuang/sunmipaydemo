@@ -69,6 +69,7 @@
     <string name="update_pan_key">更新PAN Key</string>
     <string name="update_mac_key">更新MAC Key</string>
     <string name="save_key">保存 密钥</string>
+    <string name="abortCheckCard">终止检卡</string>
     <string name="enciphered_data">加密数据</string>
     <string name="cal_8583_mac">计算8583包的MAC</string>
     <string name="click_input_password">点击输入密码</string>

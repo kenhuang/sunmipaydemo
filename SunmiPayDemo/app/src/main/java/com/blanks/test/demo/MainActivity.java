@@ -162,7 +162,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             MyApplication.deviceProvide = mDeviceProvide;
             try {
                 mDeviceProvide.registerTransactionCallback(mCallback);
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             mHandler.sendEmptyMessage(1);
@@ -173,7 +173,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             try {
                 MyApplication.deviceProvide = null;
                 deviceProvide.unRegisterTransactionCallback(mCallback);
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             mHandler.sendEmptyMessage(2);
@@ -199,7 +199,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     .show();
             //设置显示的内容
             mTvResult.setText(sb.toString());
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -248,7 +248,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     connectPayService.getDeviceProvide().getBasicProvider().ledStatusOnDevice(1, 0);
                     flag = 0;
                 }
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
@@ -269,7 +269,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (connectPayService != null && connectPayService.getDeviceProvide() != null) {
             try {
                 connectPayService.getDeviceProvide().getBasicProvider().buzzerOnDevice(2);
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
@@ -308,7 +308,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //                    Message msg = mHandler.obtainMessage(7, result);
 //                    mHandler.sendMessage(msg);
 //                }
-//            } catch (RemoteException e) {
+//            } catch (Exception e) {
 //                Message msg = mHandler.obtainMessage(-10, e.toString());
 //                mHandler.sendMessage(msg);
 //                e.printStackTrace();
@@ -430,7 +430,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if (connectPayService != null && connectPayService.getDeviceProvide() != null) {
                     try {
                         connectPayService.getDeviceProvide().getUpdateProvider().updateFirmware(path);
-                    } catch (RemoteException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 } else {
@@ -476,7 +476,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //                } else {
 //                    mHandler.obtainMessage(16, r).sendToTarget();
 //                }
-//            } catch (RemoteException e) {
+//            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
         } else {
@@ -516,7 +516,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 } else {
                     mHandler.obtainMessage(16, r).sendToTarget();
                 }
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
@@ -540,7 +540,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (connectPayService != null && connectPayService.getDeviceProvide() != null) {
             try {
                 setBasicInfo(connectPayService.getDeviceProvide().getBasicProvider());
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
@@ -681,6 +681,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void calculation8583mac(View view) {
         Intent intent = new Intent(MainActivity.this, Calculation8583MacActivity.class);
         startActivity(intent);
+    }
+
+    /**
+     * 终止检卡
+     */
+    public void abortCheckCard(View view) {
+        try {
+            //注意!stopCheckCard只有在人为中断刷卡流程时才可以调用
+            MyApplication.deviceProvide.getReadCardProvider().abortCheckCard();
+        } catch (Exception e) {
+            Toast.makeText(this, "程序异常！", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

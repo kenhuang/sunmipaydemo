@@ -68,6 +68,7 @@
     <string name="update_pan_key">Update PAN Key</string>
     <string name="update_mac_key">Update MAC Key</string>
     <string name="save_key">Save key</string>
+    <string name="abortCheckCard">abortCheckCard</string>
     <string name="enciphered_data">Encrypt the data</string>
     <string name="cal_8583_mac">Calculate the MAC of 8583 data packet</string>
     <string name="click_input_password">Click to enter the password</string>
