@@ -29,6 +29,8 @@ import com.sunmi.pay.hardware.aidl.TransactionListener;
 
 import java.util.Map;
 
+import sunmi.paylib.SunmiPayKernel;
+
 public class MainActivity extends Activity implements View.OnClickListener {
 
     private TextView mTvResult;
