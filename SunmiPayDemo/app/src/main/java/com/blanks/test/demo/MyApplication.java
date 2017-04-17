@@ -2,11 +2,13 @@ package com.blanks.test.demo;
 
 import android.app.Application;
 import android.os.RemoteException;
-import android.util.Log;
 
 import com.blanks.test.demo.utils.StringByteUtils;
 import com.sunmi.pay.hardware.aidl.DeviceProvide;
-import com.sunmi.pay.hardware.aidl.SecurityProvider;
+import com.sunmi.pay.hardware.aidl.emv.EMVOpt;
+import com.sunmi.pay.hardware.aidl.pinpad.PinPadOpt;
+import com.sunmi.pay.hardware.aidl.readcard.ReadCardOpt;
+import com.sunmi.pay.hardware.aidl.system.BasicOpt;
 
 import sunmi.paylib.SunmiPayKernel;
 
@@ -15,7 +17,26 @@ import sunmi.paylib.SunmiPayKernel;
  */
 
 public class MyApplication extends Application {
+
+    public static DeviceProvide deviceProvide;
     public static SunmiPayKernel mSunmiPayKernel;
+    /**
+     * 获取PinPad操作模块
+     */
+    public static PinPadOpt mPinPadOpt;
+    /**
+     * 获取基础操作模块
+     */
+    public static BasicOpt mBasicOpt;
+    /**
+     * 获取读卡模块
+     */
+    public static ReadCardOpt mReadCardOpt;
+    /**
+     * 获取EMV操作模块
+     */
+    public static EMVOpt mEMVOpt;
+
     public static final String TAG = "MyApplication";
 
     @Override
@@ -32,6 +53,10 @@ public class MyApplication extends Application {
         @Override
         public void onServiceConnected() {
             try {
+                mPinPadOpt = mSunmiPayKernel.mPinPadOpt;
+                mBasicOpt = mSunmiPayKernel.mBasicOpt;
+                mReadCardOpt = mSunmiPayKernel.mReadCardOpt;
+                mEMVOpt = mSunmiPayKernel.mEMVOpt;
                 initSecretKey();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -59,14 +84,14 @@ public class MyApplication extends Application {
 
         //测试时请将主密钥和工作密钥存入以下索引
         // KEK 81
-        mSunmiPayKernel.mPinPadProvider.loadKEK(KEKIndex, KEK);
+        mPinPadOpt.loadKEK(KEKIndex, KEK);
         // TMK 41
-        mSunmiPayKernel.mPinPadProvider.loadTMK(TMKIndex, 1, KEKIndex, eTMK);
+        mPinPadOpt.loadTMK(TMKIndex, 1, KEKIndex, eTMK);
         // PIK 51
-        mSunmiPayKernel.mPinPadProvider.loadPIK(PIKIndex, 2, TMKIndex, workKey, null);
+        mPinPadOpt.loadPIK(PIKIndex, 2, TMKIndex, workKey, null);
         // MAK 61
-        mSunmiPayKernel.mPinPadProvider.loadWKEY(MAKIndex, 5, TMKIndex, workKey, null);
+        mPinPadOpt.loadWKEY(MAKIndex, 5, TMKIndex, workKey, null);
         // TDK 71
-        mSunmiPayKernel.mPinPadProvider.loadWKEY(TDKIndex, 5, TMKIndex, workKey, null);
+        mPinPadOpt.loadWKEY(TDKIndex, 5, TMKIndex, workKey, null);
     }
 }
