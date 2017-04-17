@@ -7,10 +7,6 @@ import android.util.Log;
 import com.blanks.test.demo.utils.StringByteUtils;
 import com.sunmi.pay.hardware.aidl.DeviceProvide;
 import com.sunmi.pay.hardware.aidl.SecurityProvider;
-import com.sunmi.pay.hardware.aidl.emv.EMVProvider;
-import com.sunmi.pay.hardware.aidl.pinpad.PinPadProvider;
-import com.sunmi.pay.hardware.aidl.readcard.ReadCardProvider;
-import com.sunmi.pay.hardware.aidl.system.BasicProvider;
 
 import sunmi.paylib.SunmiPayKernel;
 
@@ -20,11 +16,6 @@ import sunmi.paylib.SunmiPayKernel;
 
 public class MyApplication extends Application {
     public static SunmiPayKernel mSunmiPayKernel;
-    public static PinPadProvider mPinPadProvider;
-    public static BasicProvider mBasicProvider;
-    public static ReadCardProvider mReadCardProvider;
-    public static EMVProvider mEMVProvider;
-
     public static final String TAG = "MyApplication";
 
     @Override
@@ -32,13 +23,34 @@ public class MyApplication extends Application {
         super.onCreate();
     }
 
-    private static int KEKIndex = 81;
-    private static int TMKIndex = 41;
-    private static int PIKIndex = 51;
-    private static int MAKIndex = 61;
-    private static int TDKIndex = 71;
+    public void conn() {
+        mSunmiPayKernel = SunmiPayKernel.getInstance();
+        mSunmiPayKernel.connectPayService(getApplicationContext(), mConnCallback);
+    }
 
-    public static void initSecretKey() throws RemoteException {
+    private SunmiPayKernel.ConnCallback mConnCallback = new SunmiPayKernel.ConnCallback() {
+        @Override
+        public void onServiceConnected() {
+            try {
+                initSecretKey();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected() {
+        }
+    };
+
+    public static int KEKIndex = 81;
+    public static int TMKIndex = 41;
+    public static int PIKIndex = 51;
+    public static int MAKIndex = 61;
+    public static int TDKIndex = 71;
+
+
+    private void initSecretKey() throws RemoteException {
         byte[] KEK = {(byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33,
                 (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33, (byte) 0x33};
         byte[] eTMK = StringByteUtils.HexString2Bytes("B784118946137E571C9DA668C2D790E2");
@@ -47,14 +59,14 @@ public class MyApplication extends Application {
 
         //测试时请将主密钥和工作密钥存入以下索引
         // KEK 81
-        mPinPadProvider.loadKEK(KEKIndex, KEK);
+        mSunmiPayKernel.mPinPadProvider.loadKEK(KEKIndex, KEK);
         // TMK 41
-        mPinPadProvider.loadTMK(TMKIndex, 1, KEKIndex, eTMK);
+        mSunmiPayKernel.mPinPadProvider.loadTMK(TMKIndex, 1, KEKIndex, eTMK);
         // PIK 51
-        mPinPadProvider.loadPIK(PIKIndex, 2, TMKIndex, workKey, null);
+        mSunmiPayKernel.mPinPadProvider.loadPIK(PIKIndex, 2, TMKIndex, workKey, null);
         // MAK 61
-        mPinPadProvider.loadWKEY(MAKIndex, 5, TMKIndex, workKey, null);
+        mSunmiPayKernel.mPinPadProvider.loadWKEY(MAKIndex, 5, TMKIndex, workKey, null);
         // TDK 71
-        mPinPadProvider.loadWKEY(TDKIndex, 5, TMKIndex, workKey, null);
+        mSunmiPayKernel.mPinPadProvider.loadWKEY(TDKIndex, 5, TMKIndex, workKey, null);
     }
 }

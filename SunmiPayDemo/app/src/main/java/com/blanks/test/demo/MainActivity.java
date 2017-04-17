@@ -161,6 +161,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         @Override
         public void onServiceConnected(DeviceProvide mDeviceProvide) {
             deviceProvide = mDeviceProvide;
+            MyApplication.deviceProvide = mDeviceProvide;
             try {
                 mDeviceProvide.registerTransactionCallback(mCallback);
             } catch (Exception e) {
@@ -172,6 +173,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         @Override
         public void onServiceDisconnected() {
             try {
+                MyApplication.deviceProvide = null;
                 deviceProvide.unRegisterTransactionCallback(mCallback);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -206,31 +208,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private ConnectPayService connectPayService;
 
-    SunmiPayKernel mSunmiPayKernel;
-
     public void init(View view) {
-        SunmiPayKernel mSunmiPayKernel = SunmiPayKernel.getInstance();
-        mSunmiPayKernel.connectPayService(getApplicationContext(), mConnCallback);
+        connectPayService = ConnectPayService.Init(this.getApplicationContext());
+        connectPayService.connectPayService(mPayServiceConnected);
     }
-
-    private SunmiPayKernel.ConnCallback mConnCallback = new SunmiPayKernel.ConnCallback() {
-        @Override
-        public void onServiceConnected() {
-            try {
-                MyApplication.mPinPadProvider = mSunmiPayKernel.mPinPadProvider;
-                MyApplication.mBasicProvider = mSunmiPayKernel.mBasicProvider;
-                MyApplication.mReadCardProvider = mSunmiPayKernel.mReadCardProvider;
-                MyApplication.mEMVProvider = mSunmiPayKernel.mEMVProvider;
-                MyApplication.initSecretKey();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void onServiceDisconnected() {
-        }
-    };
 
     /**
      * 打开LED灯
@@ -710,7 +691,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void abortCheckCard(View view) {
         try {
             //注意!stopCheckCard只有在人为中断刷卡流程时才可以调用
-            MyApplication.mEMVProvider.abortEMV();
+            MyApplication.deviceProvide.getReadCardProvider().abortCheckCard();
         } catch (Exception e) {
             Toast.makeText(this, "程序异常！", Toast.LENGTH_LONG).show();
         }
