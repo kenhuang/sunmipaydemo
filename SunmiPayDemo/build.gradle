@@ -2,6 +2,9 @@
 
 buildscript {
     repositories {
+        maven {
+            url 'https://dl.bintray.com/sunmi/maven/'
+        }
         jcenter()
     }
     dependencies {
@@ -15,6 +18,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven{ url 'https://dl.bintray.com/sunmios/maven'}
     }
 }
 
