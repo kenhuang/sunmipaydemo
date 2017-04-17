@@ -4,7 +4,6 @@ import android.app.Application;
 import android.os.RemoteException;
 
 import com.blanks.test.demo.utils.StringByteUtils;
-import com.sunmi.pay.hardware.aidl.DeviceProvide;
 import com.sunmi.pay.hardware.aidl.emv.EMVOpt;
 import com.sunmi.pay.hardware.aidl.pinpad.PinPadOpt;
 import com.sunmi.pay.hardware.aidl.readcard.ReadCardOpt;
@@ -18,7 +17,6 @@ import sunmi.paylib.SunmiPayKernel;
 
 public class MyApplication extends Application {
 
-    public static DeviceProvide deviceProvide;
     public static SunmiPayKernel mSunmiPayKernel;
     /**
      * 获取PinPad操作模块

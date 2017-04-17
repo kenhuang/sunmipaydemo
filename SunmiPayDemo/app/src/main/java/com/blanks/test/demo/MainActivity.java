@@ -161,7 +161,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         @Override
         public void onServiceConnected(DeviceProvide mDeviceProvide) {
             deviceProvide = mDeviceProvide;
-            MyApplication.deviceProvide = mDeviceProvide;
             try {
                 mDeviceProvide.registerTransactionCallback(mCallback);
             } catch (Exception e) {
@@ -173,7 +172,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         @Override
         public void onServiceDisconnected() {
             try {
-                MyApplication.deviceProvide = null;
                 deviceProvide.unRegisterTransactionCallback(mCallback);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -691,7 +689,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void abortCheckCard(View view) {
         try {
             //注意!stopCheckCard只有在人为中断刷卡流程时才可以调用
-            MyApplication.deviceProvide.getReadCardProvider().abortCheckCard();
+            MyApplication.mEMVOpt.abortEMV();
         } catch (Exception e) {
             Toast.makeText(this, "程序异常！", Toast.LENGTH_LONG).show();
         }
